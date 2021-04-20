@@ -61,7 +61,7 @@ export default class Login extends React.Component{
                     borderRadius:23,
                     paddingVertical:2
                 }}>
-                    <Icon name="mail" color="#00716F" size={24}/>
+                    <Icon name="lock" color="#00716F" size={24}/>
                     <TextInput 
                         style={{paddingHorizontal:10}}
                     />
@@ -79,7 +79,11 @@ export default class Login extends React.Component{
                     paddingVertical:10,
                     borderRadius:23
                 }}>
-                    <Text style={{
+                    <Text
+
+                        onPress={()=>navigate('Button')}
+
+                        style={{
                         color:"white",
                         fontFamily:"SemiBold"
                     }}>Already a member</Text>
