@@ -9,7 +9,7 @@ export default class Login extends React.Component{
         return(
             <View style={{backgroundColor:"#FFF",height:"100%"}}>
                 <Image source ={require('../images/image.jpg')}
-                    style={{width:"100%",height:"43%"}}
+                    style={{width:"100%",height:"40%"}}
                 />
                 <Text
                  style={{
@@ -86,7 +86,7 @@ export default class Login extends React.Component{
                         style={{
                         color:"white",
                         fontFamily:"SemiBold"
-                    }}>Already a member</Text>
+                    }}>Login</Text>
                 </View>
                 <Text 
                 

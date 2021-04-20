@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Switch, StyleSheet} from 'react-native';
+import {View, Switch, StyleSheet, Image} from 'react-native';
 import {Text} from "react-native-web";
 import Icon from '@expo/vector-icons/AntDesign';
 
@@ -15,11 +15,14 @@ export default function App({navigation}) {
 
     return (
         <View style={{backgroundColor:"#FFF",height:"100%"}}>
+            <Image source ={require('../images/usj.jpg')}
+                   style={{width:"100%",height:"35%"}}
+            />
 
                 <Text
                     style={{
                         alignSelf:"center",
-                        position: 'absolute', left: '49%', top: '45%',
+                        position: 'absolute', left: '49%', top: '40%',
                         transform: 'translate(-50%, -50%)',
                         borderWidth:2,
                         borderColor:"Black",
@@ -27,27 +30,19 @@ export default function App({navigation}) {
                         fontFamily:"SemiBold"
                     }}>Turn On/Off</Text>
 
-            <Switch
-                style={{
-                    alignSelf:"center",
-                    position: 'absolute', left: '50%', top: '50%',
-                    transform: 'translate(-50%, -50%)'
-                }}
 
-                trackColor={{ false: '#767577', true: '#81b0ff' }}
-                thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
-                ios_backgroundColor="#3e3e3e"
-                onValueChange={toggleSwitch}
-                value={isEnabled}
-            />
 
             <Icon
                 style={{
+                    borderRadius:20,
+                    borderWidth: 2,
+                    borderColor: 'rgb(170, 207, 202)',
+                    overflow: "hidden",
                     alignSelf:"center",
-                    position: 'absolute', left: '50%', top: '70%',
+                    position: 'absolute', left: '49%', top: '50%',
                     transform: 'translate(-50%, -50%)'
                 }}
-                name="poweroff" color={isEnabled ? "green" : "red"} size={60}
+                name="poweroff" color={isEnabled ? "green" : "red"} size={80}
                 onPress={toggleSwitch}
 
 
@@ -59,7 +54,7 @@ export default function App({navigation}) {
             <Text
                 style={{
                     alignSelf:"center",
-                    position: 'absolute', left: '49%', top: '55%',
+                    position: 'absolute', left: '49%', top: '60%',
                     transform: 'translate(-50%, -50%)',
                     borderWidth:2,
                     borderColor:"Black",
