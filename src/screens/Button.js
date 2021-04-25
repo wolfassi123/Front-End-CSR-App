@@ -69,17 +69,70 @@ export default function App({navigation}) {
                 borderRadius:23
             }}>
                 <Text
-
                     onPress={()=> {navigation.navigate('Login')
                         console.log("Exit")
-
                     }}
-
                     style={{
                         color:"white",
                         fontFamily:"SemiBold"
                     }}>Exit</Text>
             </View>
+
+            <View style={{
+                position: 'absolute', left: '10%', top: '75%',
+                transform: 'translate(-50%, -50%)',
+                marginHorizontal:55,
+                alignItems:"center",
+                justifyContent:"center",
+                marginTop:60,
+                backgroundColor:"#00716F",
+                paddingVertical:50,
+                borderRadius:50
+            }}>
+                <Text
+                    style={{
+                        alignSelf:"center",
+                        position: 'absolute', left: '49%', top: '10%',
+                        transform: 'translate(0%, 0%)',
+                        borderWidth:2,
+                        borderColor:"Black",
+                        color:"Black",
+                        fontFamily:"SemiBold"
+                    }}>User:</Text>
+                <Text
+                    style={{
+                        alignSelf:"center",
+                        position: 'absolute', left: '49%', top: '30%',
+                        transform: 'translate(0%, 0%)',
+                        borderWidth:2,
+                        borderColor:"Black",
+                        color:"Black",
+                        fontFamily:"SemiBold"
+                    }}>U.V.Lights:</Text>
+                <Text
+                    style={{
+                        alignSelf:"center",
+                        position: 'absolute', left: '49%', top: '50%',
+                        transform: 'translate(0%, 0%)',
+                        borderWidth:2,
+                        borderColor:"Black",
+                        color:"Black",
+                        fontFamily:"SemiBold"
+                    }}>Pump:</Text>
+                <Text
+                    style={{
+                        alignSelf:"center",
+                        position: 'absolute', left: '49%', top: '70%',
+                        transform: 'translate(0%, 0%)',
+                        borderWidth:2,
+                        borderColor:"Black",
+                        color:"Black",
+                        fontFamily:"SemiBold"
+                    }}>Time:</Text>
+
+
+            </View>
+
 
 
         </View>
