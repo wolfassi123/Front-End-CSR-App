@@ -18,7 +18,6 @@ export default function App({navigation}) {
             <Image source ={require('../images/usj.jpg')}
                    style={{width:"100%",height:"35%"}}
             />
-
                 <Text
                     style={{
                         alignSelf:"center",
@@ -29,9 +28,6 @@ export default function App({navigation}) {
                         color:"Black",
                         fontFamily:"SemiBold"
                     }}>Turn On/Off</Text>
-
-
-
             <Icon
                 style={{
                     borderRadius:20,
@@ -44,13 +40,7 @@ export default function App({navigation}) {
                 }}
                 name="poweroff" color={isEnabled ? "green" : "red"} size={80}
                 onPress={toggleSwitch}
-
-
-
             />
-
-
-
             <Text
                 style={{
                     alignSelf:"center",

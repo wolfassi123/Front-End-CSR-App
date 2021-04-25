@@ -5,7 +5,7 @@ import Icon from '@expo/vector-icons/AntDesign';
 export default class Register extends React.Component{
 
     render(){
-        
+        const {navigate} = this.props.navigation
         return(
             <View style={{backgroundColor:"#FFF",height:"100%"}}>
                 <Image source ={require('../images/image.jpg')}
@@ -111,6 +111,26 @@ export default class Register extends React.Component{
                         fontFamily:"SemiBold"
                     }}>Register</Text>
                 </View>
+
+
+                <View style={{
+                    marginHorizontal:55,
+                    alignItems:"center",
+                    justifyContent:"center",
+                    marginTop:30,
+                    backgroundColor:"#00716F",
+                    paddingVertical:10,
+                    borderRadius:23
+                }}>
+                    <Text
+                        onPress={()=>navigate('Login')}
+                        style={{
+                        color:"white",
+                        fontFamily:"SemiBold"
+                    }}>Back</Text>
+                </View>
+
+
               
             </View>
         )
