@@ -5,6 +5,17 @@ import AppNavigator from './src/navigations/Navigator'
 import * as Font from 'expo-font';
 import {AppLoading} from 'expo'
 import { isRequired } from 'react-native/Libraries/DeprecatedPropTypes/DeprecatedColorPropType';
+import axios from 'axios';
+
+window.axios=axios;
+
+window.api=axios.create({
+  baseURL: 'http://localhost:3000',
+  timeout: 10000,
+})
+
+
+
 
 export default class App extends React.Component {
   state = {

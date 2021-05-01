@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import {View, Switch, StyleSheet, Image} from 'react-native';
+import {View, Switch, StyleSheet, Image ,Alert ,Button} from 'react-native';
 import {Text} from "react-native-web";
 import Icon from '@expo/vector-icons/AntDesign';
-
-
 
 
 export default function App({navigation}) {
@@ -11,6 +9,9 @@ export default function App({navigation}) {
     const toggleSwitch = () => {setIsEnabled(previousState => !previousState);
         console.log (isEnabled);
     }
+    const inter = () =>{ setIsEnabled(false)};
+
+//
 
 
     return (
@@ -40,6 +41,9 @@ export default function App({navigation}) {
                 }}
                 name="poweroff" color={isEnabled ? "green" : "red"} size={80}
                 onPress={toggleSwitch}
+
+
+
             />
             <Text
                 style={{
@@ -56,6 +60,20 @@ export default function App({navigation}) {
                 {isEnabled ? "On " : "Off "}
                 {"currently"}
             </Text>
+
+            <View
+                style={{top:'30%'}}
+            >
+                <Button
+                    style={{
+
+                    }}
+                    title="Movement"
+                    onPress={() => (alert('Movement was detected in the surroundings. Robot will turn off.'),inter())}
+                />
+            </View>
+
+
 
             <View style={{
                 position: 'absolute', left: '90%', top: '90%',
@@ -109,6 +127,7 @@ export default function App({navigation}) {
                         color:"Black",
                         fontFamily:"SemiBold"
                     }}>U.V.Lights:</Text>
+
                 <Text
                     style={{
                         alignSelf:"center",
@@ -128,14 +147,11 @@ export default function App({navigation}) {
                         borderColor:"Black",
                         color:"Black",
                         fontFamily:"SemiBold"
-                    }}>Time:</Text>
-
-
+                    }}>Status:</Text>
             </View>
 
-
-
         </View>
+
     );
 }
 
